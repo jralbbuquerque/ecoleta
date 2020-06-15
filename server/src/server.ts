@@ -1,5 +1,7 @@
 import express from 'express';
+import cros from 'cors';
 import routes from './routes';
+import path from 'path';
 
 // Rota: Endereço completo da requisição
 // Recurso: Qual entidade estamos acessando do sistema 
@@ -18,7 +20,11 @@ import routes from './routes';
 
 const app = express();
 
+app.use(cros());
+
 app.use(express.json());
 app.use(routes);
+
+app.use('/uploads', express.static(path.resolve(__dirname, '..', 'uploads')));
 
 app.listen(3333);

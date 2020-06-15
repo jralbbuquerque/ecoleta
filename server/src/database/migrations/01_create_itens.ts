@@ -1,7 +1,7 @@
 import Knex from 'knex';
 
 /* Com TypeScript, a partir do momento que definimos o tipo
-   da variável (ignorando os tipos primitivos) a IDE permite
+   da variável (ignorando os tipos primitivos) a IDE permite 
   acesso a todos os métodos e recursos da LIB. 
 */
 export async function up(knex: Knex){
